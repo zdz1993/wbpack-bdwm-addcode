@@ -1,0 +1,25 @@
+{
+  "name": "wbpack-bdwm-addmonitor",
+  "version": "1.0.0",
+  "description": "A webpack plugin to add monitor code to script bdwm app",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zdz1993/wbpack-bdwm-addcode.git"
+  },
+  "keywords": [
+    "webpack",
+    "plugin",
+    "addcode",
+    "bdwm"
+  ],
+  "author": "zdz1993",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zdz1993/wbpack-bdwm-addcode/issues"
+  },
+  "homepage": "https://github.com/wangcaipang/script-attr-html-webpack-plugin#readme",
+  "devDependencies": {
+    "webpack": "^3.0.0"
+  }
+}

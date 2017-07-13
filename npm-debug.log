@@ -1,0 +1,101 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'D:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'D:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'publish' ]
+2 info using npm@3.9.3
+3 info using node@v6.2.1
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: 'C:\\Users\\think\\Desktop\\webpack-bdwm-addmonitor',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory D:\Program Files\nodejs\node_cache\wbpack-bdwm-addcode\1.0.0\package.tgz not in flight; packing
+9 verbose correctMkdir D:\Program Files\nodejs\node_cache correctMkdir not in flight; initializing
+10 info lifecycle wbpack-bdwm-addcode@1.0.0~prepublish: wbpack-bdwm-addcode@1.0.0
+11 silly lifecycle wbpack-bdwm-addcode@1.0.0~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ 'D:\\Program Files\\nodejs\\node_cache\\wbpack-bdwm-addcode\\1.0.0\\package.tgz',
+12 verbose tar pack   'C:\\Users\\think\\Desktop\\webpack-bdwm-addmonitor' ]
+13 verbose tarball D:\Program Files\nodejs\node_cache\wbpack-bdwm-addcode\1.0.0\package.tgz
+14 verbose folder C:\Users\think\Desktop\webpack-bdwm-addmonitor
+15 verbose addLocalTarball adding from inside cache D:\Program Files\nodejs\node_cache\wbpack-bdwm-addcode\1.0.0\package.tgz
+16 verbose correctMkdir D:\Program Files\nodejs\node_cache correctMkdir not in flight; initializing
+17 silly cache afterAdd wbpack-bdwm-addcode@1.0.0
+18 verbose afterAdd D:\Program Files\nodejs\node_cache\wbpack-bdwm-addcode\1.0.0\package\package.json not in flight; writing
+19 verbose correctMkdir D:\Program Files\nodejs\node_cache correctMkdir not in flight; initializing
+20 verbose afterAdd D:\Program Files\nodejs\node_cache\wbpack-bdwm-addcode\1.0.0\package\package.json written
+21 silly publish { name: 'wbpack-bdwm-addcode',
+21 silly publish   version: '1.0.0',
+21 silly publish   description: 'A webpack plugin to add monitor code to script bdwm app',
+21 silly publish   main: 'index.js',
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/zdz1993/wbpack-bdwm-addcode.git' },
+21 silly publish   keywords: [ 'webpack', 'plugin', 'addcode', 'bdwm' ],
+21 silly publish   author: { name: 'zdz1993' },
+21 silly publish   license: 'MIT',
+21 silly publish   bugs: { url: 'https://github.com/zdz1993/wbpack-bdwm-addcode/issues' },
+21 silly publish   homepage: 'https://github.com/wangcaipang/script-attr-html-webpack-plugin#readme',
+21 silly publish   devDependencies: { webpack: '^3.0.0' },
+21 silly publish   readme: '\r\n#### wbpack-bdwm-addcode [wbpack-bdwm-addcode](https://github.com/zdz1993/wbpack-bdwm-addcode)\r\n\r\n#### 介绍\r\n  本插件是像bdwm app 插入监控代码的插件\r\n\r\n#### 使用\r\n\r\n  1、安装\r\n  ```shell\r\n    $ npm install --save-dev webpack-bdwm-addcode\r\n  ```\r\n  2、配置\r\n    配置指定文件：\r\n  ```javascript\r\n    plugins: [\r\n      new HtmlWebpackPlugin({\r\n          filename: \'enter.html\',\r\n          template: path.join(__dirname, \'src/enter.html\'),\r\n          chunks: [\'enter\'],\r\n          inject: true\r\n        }),\r\n        new WebpackAssetMonitor({\r\n          \'index.html\': {\r\n            product: \'pinzhi\',\r\n            page: \'index\'\r\n          },\r\n          \'enter.html\': {\r\n            product: \'pinzhi\',\r\n            page: \'index\'\r\n          }\r\n        })\r\n    ]\r\n  ```\r\n  配置全部文件：\r\n\r\n  ```javascript\r\n    plugins: [\r\n      new HtmlWebpackPlugin({\r\n          filename: \'enter.html\',\r\n          template: path.join(__dirname, \'src/enter.html\'),\r\n          chunks: [\'enter\'],\r\n          inject: true\r\n        }),\r\n        new WebpackAssetMonitor({\r\n            product: \'pinzhi\'\r\n        })\r\n    ]\r\n  ```\r\n',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: 'ee230e3d02fdc3379fa79a4be62a4c647c33cbd9',
+21 silly publish   _id: 'wbpack-bdwm-addcode@1.0.0',
+21 silly publish   scripts: {},
+21 silly publish   _shasum: '069e5be80630b984f1d4654a2dc0dd3920449e58',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name wbpack-bdwm-addcode
+24 silly mapToRegistry using default registry
+25 silly mapToRegistry registry https://registry.npm.taobao.org/
+26 silly mapToRegistry data Result {
+26 silly mapToRegistry   raw: 'wbpack-bdwm-addcode',
+26 silly mapToRegistry   scope: null,
+26 silly mapToRegistry   name: 'wbpack-bdwm-addcode',
+26 silly mapToRegistry   rawSpec: '',
+26 silly mapToRegistry   spec: 'latest',
+26 silly mapToRegistry   type: 'tag' }
+27 silly mapToRegistry uri https://registry.npm.taobao.org/wbpack-bdwm-addcode
+28 verbose publish registryBase https://registry.npm.taobao.org/
+29 silly publish uploading D:\Program Files\nodejs\node_cache\wbpack-bdwm-addcode\1.0.0\package.tgz
+30 verbose request uri https://registry.npm.taobao.org/wbpack-bdwm-addcode
+31 verbose request sending authorization for write operation
+32 info attempt registry request try #1 at 18:20:18
+33 verbose request id 6690ddf248a6ddb3
+34 http request PUT https://registry.npm.taobao.org/wbpack-bdwm-addcode
+35 http 403 https://registry.npm.taobao.org/wbpack-bdwm-addcode
+36 verbose headers { date: 'Thu, 13 Jul 2017 10:20:18 GMT',
+36 verbose headers   'content-type': 'application/json; charset=utf-8',
+36 verbose headers   'content-length': '87',
+36 verbose headers   connection: 'keep-alive',
+36 verbose headers   'x-current-requests': '1',
+36 verbose headers   'x-readtime': '8' }
+37 verbose request invalidating D:\Program Files\nodejs\node_cache\registry.npm.taobao.org\wbpack-bdwm-addcode on PUT
+38 error publish Failed PUT 403
+39 verbose stack Error: no_perms Private mode enable, only admin can publish this module: wbpack-bdwm-addcode
+39 verbose stack     at makeError (D:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:264:12)
+39 verbose stack     at CachingRegistryClient.<anonymous> (D:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:252:14)
+39 verbose stack     at Request._callback (D:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\request.js:172:14)
+39 verbose stack     at Request.self.callback (D:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:200:22)
+39 verbose stack     at emitTwo (events.js:106:13)
+39 verbose stack     at Request.emit (events.js:191:7)
+39 verbose stack     at Request.<anonymous> (D:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:1067:10)
+39 verbose stack     at emitOne (events.js:101:20)
+39 verbose stack     at Request.emit (events.js:188:7)
+39 verbose stack     at IncomingMessage.<anonymous> (D:\Program Files\nodejs\node_modules\npm\node_modules\request\request.js:988:12)
+40 verbose statusCode 403
+41 verbose pkgid wbpack-bdwm-addcode
+42 verbose cwd C:\Users\think\Desktop\webpack-bdwm-addmonitor
+43 error Windows_NT 6.1.7601
+44 error argv "D:\\Program Files\\nodejs\\node.exe" "D:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish"
+45 error node v6.2.1
+46 error npm  v3.9.3
+47 error code E403
+48 error no_perms Private mode enable, only admin can publish this module: wbpack-bdwm-addcode
+49 error If you need help, you may report this error at:
+49 error     <https://github.com/npm/npm/issues>
+50 verbose exit [ 1, true ]
