@@ -1,5 +1,4 @@
 
-#### wbpack-bdwm-addcode [wbpack-bdwm-addcode](https://github.com/zdz1993/wbpack-bdwm-addcode)
 
 #### 介绍
   本插件是像bdwm app 插入监控代码的插件
@@ -8,7 +7,7 @@
 
   1、安装
   ```shell
-    $ npm install --save-dev webpack-bdwm-addcode
+    $ npm install --save-dev webpack-bdwm-addmonitor
   ```
   2、配置
     配置指定文件：

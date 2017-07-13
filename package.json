@@ -1,5 +1,5 @@
 {
-  "name": "wbpack-bdwm-addmonitor",
+  "name": "webpack-bdwm-addmonitor",
   "version": "1.0.0",
   "description": "A webpack plugin to add monitor code to script bdwm app",
   "main": "index.js",
