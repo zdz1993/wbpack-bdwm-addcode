@@ -10,6 +10,7 @@
     $ npm install --save-dev webpack-bdwm-addmonitor
   ```
   2、配置
+  
     配置指定文件：
   ```javascript
     plugins: [
