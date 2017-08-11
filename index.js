@@ -2,11 +2,6 @@ const fs = require('fs')
 class WebpackMonitor {
   constructor (options) {
     this.options = options
-    this.replaceHtml = ` 
-            !(function () { 'use strict'; function e (e) { var t = o.createElement('script'), n = o.getElementsByTagName('script')[0]; t.async = !0, t.src = e, n.parentNode.insertBefore(t, n) } function t (e) { for (var t = e.split('.'), n = window.wmlog, o = void 0; t.length > 0 && (o = t.shift()) && n[o];)n = n[o]; n !== window.wmlog && typeof n === 'function' ? n.apply(null, [].slice.call(arguments, 1)) : i.log.push([].slice.call(arguments)) } var n = window, o = n.document, i = n.wmlogConfig; i.scriptLoader = e, i.log = [], window.wmlog = t, window.addEventListener('load', function () { e('https://s.waimai.baidu.com/xin/static/perf/dev/loader.js?' + +new Date()) }), i.speed && i.speed.sample > 0 && (t('speed.set', 'ht', +new Date()), window.addEventListener('load', function () { t('speed.set', 'lt', +new Date()), i.loaded = !0 }), o.addEventListener('DOMContentLoaded', function () { t('speed.set', 'drt', +new Date()) })) }())
-        </script>
-      </head>
-      `
   }
   apply (compiler) {
     let _this = this
@@ -22,15 +17,19 @@ class WebpackMonitor {
           let exception = JSON.stringify(value.exception) || '{"sample":1}'
           let html = compilation.assets[key].source()
           let varhtml = ` 
-          <script>
-            window.wmlogConfig = {
-              'product': ${product},
-              'page': ${page},
-              'speed': ${speed},
-              'exception': ${exception}
-            }`
+            <script src='https://s.waimai.baidu.com/xin/static/perf/dev/deploy.js'></script>            
+            <script>
+              window.wmlogConfig = {
+                'product': ${product},
+                'page': ${page},
+                'speed': ${speed},
+                'exception': ${exception}
+              }
+            </script>
+          </head>
+          `
           let filepath = `${dist}/${key}`
-          let newhtml = html.replace('</head>', `${varhtml}${_this.replaceHtml}`)
+          let newhtml = html.replace('</head>', `${varhtml}`)
           assetsHtml(compilation, filepath, newhtml, key)
         }
       } else if (_this.options.product) {
@@ -40,16 +39,19 @@ class WebpackMonitor {
         array.forEach(item => {
           let filepath = `${dist}/${item}`
           let varhtml = `
-          <script>          
-            window.wmlogConfig = {
-              'product': ${_this.options.product},
-              'page': ${item},
-              'speed': ${_this.options.speed} || '{"sample":1,"auto":true,"ext":[]}',
-              'exception': ${_this.options.exception} || '{"sample":1}'
-            }
+            <script src='https://s.waimai.baidu.com/xin/static/perf/dev/deploy.js'></script>            
+            <script>          
+              window.wmlogConfig = {
+                'product': ${_this.options.product},
+                'page': ${item},
+                'speed': ${_this.options.speed} || '{"sample":1,"auto":true,"ext":[]}',
+                'exception': ${_this.options.exception} || '{"sample":1}'
+              }
+            </script>
+          </head>
           `
           let html = compilation.assets[item].source()
-          let newhtml = html.replace('</head>', `${varhtml}${_this.replaceHtml}`)
+          let newhtml = html.replace('</head>', `${varhtml}`)
           assetsHtml(compilation, filepath, newhtml, item)
         })
       } else {
